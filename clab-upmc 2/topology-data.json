@@ -1,0 +1,250 @@
+{
+  "name": "upmc",
+  "type": "clab",
+  "clab": {
+    "config": {
+      "prefix": "",
+      "mgmt": {
+        "network": "clab",
+        "bridge": "br-d7b0af991463",
+        "ipv4-subnet": "172.20.20.0/24",
+        "ipv4-gw": "172.20.20.1",
+        "ipv6-subnet": "3fff:172:20:20::/64",
+        "ipv6-gw": "3fff:172:20:20::1",
+        "mtu": 1500,
+        "external-access": true
+      }
+    }
+  },
+  "ssh-pub-keys": [],
+  "nodes": {
+    "client1": {
+      "index": "0",
+      "shortname": "client1",
+      "longname": "client1",
+      "fqdn": "client1.upmc.io",
+      "group": "",
+      "labdir": "/home/saju/clab-quickstart/clab-upmc/client1",
+      "kind": "linux",
+      "image": "ghcr.io/srl-labs/network-multitool",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.20.20.2",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "3fff:172:20:20::2",
+      "mgmt-ipv6-prefix-length": 64,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-d7b0af991463",
+        "clab-node-group": "",
+        "clab-node-kind": "linux",
+        "clab-node-lab-dir": "/home/saju/clab-quickstart/clab-upmc/client1",
+        "clab-node-longname": "client1",
+        "clab-node-name": "client1",
+        "clab-node-type": "",
+        "clab-owner": "root",
+        "clab-topo-file": "/home/saju/clab-quickstart/upmc-vsrl.yml",
+        "containerlab": "upmc"
+      },
+      "port-bindings": [
+        {
+          "host-ip": "",
+          "host-port": 0,
+          "port": 11443,
+          "protocol": "tcp"
+        },
+        {
+          "host-ip": "",
+          "host-port": 0,
+          "port": 1180,
+          "protocol": "tcp"
+        },
+        {
+          "host-ip": "",
+          "host-port": 0,
+          "port": 22,
+          "protocol": "tcp"
+        },
+        {
+          "host-ip": "",
+          "host-port": 0,
+          "port": 443,
+          "protocol": "tcp"
+        },
+        {
+          "host-ip": "",
+          "host-port": 0,
+          "port": 80,
+          "protocol": "tcp"
+        }
+      ]
+    },
+    "client2": {
+      "index": "1",
+      "shortname": "client2",
+      "longname": "client2",
+      "fqdn": "client2.upmc.io",
+      "group": "",
+      "labdir": "/home/saju/clab-quickstart/clab-upmc/client2",
+      "kind": "linux",
+      "image": "ghcr.io/srl-labs/network-multitool",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.20.20.3",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "3fff:172:20:20::3",
+      "mgmt-ipv6-prefix-length": 64,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-d7b0af991463",
+        "clab-node-group": "",
+        "clab-node-kind": "linux",
+        "clab-node-lab-dir": "/home/saju/clab-quickstart/clab-upmc/client2",
+        "clab-node-longname": "client2",
+        "clab-node-name": "client2",
+        "clab-node-type": "",
+        "clab-owner": "root",
+        "clab-topo-file": "/home/saju/clab-quickstart/upmc-vsrl.yml",
+        "containerlab": "upmc"
+      },
+      "port-bindings": [
+        {
+          "host-ip": "",
+          "host-port": 0,
+          "port": 22,
+          "protocol": "tcp"
+        },
+        {
+          "host-ip": "",
+          "host-port": 0,
+          "port": 443,
+          "protocol": "tcp"
+        },
+        {
+          "host-ip": "",
+          "host-port": 0,
+          "port": 80,
+          "protocol": "tcp"
+        },
+        {
+          "host-ip": "",
+          "host-port": 0,
+          "port": 11443,
+          "protocol": "tcp"
+        },
+        {
+          "host-ip": "",
+          "host-port": 0,
+          "port": 1180,
+          "protocol": "tcp"
+        }
+      ]
+    },
+    "leaf1": {
+      "index": "2",
+      "shortname": "leaf1",
+      "longname": "leaf1",
+      "fqdn": "leaf1.upmc.io",
+      "group": "",
+      "labdir": "/home/saju/clab-quickstart/clab-upmc/leaf1",
+      "kind": "nokia_srlinux",
+      "image": "ghcr.io/nokia/srlinux:25.3.1",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.20.20.4",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "3fff:172:20:20::4",
+      "mgmt-ipv6-prefix-length": 64,
+      "mac-address": "1a:c4:02:00:00:00",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-d7b0af991463",
+        "clab-node-group": "",
+        "clab-node-kind": "nokia_srlinux",
+        "clab-node-lab-dir": "/home/saju/clab-quickstart/clab-upmc/leaf1",
+        "clab-node-longname": "leaf1",
+        "clab-node-name": "leaf1",
+        "clab-node-type": "ixrd2l",
+        "clab-owner": "root",
+        "clab-topo-file": "/home/saju/clab-quickstart/upmc-vsrl.yml",
+        "containerlab": "upmc"
+      },
+      "port-bindings": [
+      ]
+    },
+    "leaf2": {
+      "index": "3",
+      "shortname": "leaf2",
+      "longname": "leaf2",
+      "fqdn": "leaf2.upmc.io",
+      "group": "",
+      "labdir": "/home/saju/clab-quickstart/clab-upmc/leaf2",
+      "kind": "nokia_srlinux",
+      "image": "ghcr.io/nokia/srlinux:25.3.1",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.20.20.5",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "3fff:172:20:20::5",
+      "mgmt-ipv6-prefix-length": 64,
+      "mac-address": "1a:6b:03:00:00:00",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-d7b0af991463",
+        "clab-node-group": "",
+        "clab-node-kind": "nokia_srlinux",
+        "clab-node-lab-dir": "/home/saju/clab-quickstart/clab-upmc/leaf2",
+        "clab-node-longname": "leaf2",
+        "clab-node-name": "leaf2",
+        "clab-node-type": "ixrd2l",
+        "clab-owner": "root",
+        "clab-topo-file": "/home/saju/clab-quickstart/upmc-vsrl.yml",
+        "containerlab": "upmc"
+      },
+      "port-bindings": [
+      ]
+    }
+  },
+  "links": [
+    {
+      "a": {
+        "node": "leaf1",
+        "interface": "e1-1",
+        "mac": "aa:c1:ab:a9:02:50",
+        "peer": "z"
+      },
+      "z": {
+        "node": "leaf2",
+        "interface": "e1-1",
+        "mac": "aa:c1:ab:b2:dd:b0",
+        "peer": "a"
+      }
+    },
+    {
+      "a": {
+        "node": "leaf1",
+        "interface": "e1-10",
+        "mac": "aa:c1:ab:48:df:70",
+        "peer": "z"
+      },
+      "z": {
+        "node": "client1",
+        "interface": "eth1",
+        "mac": "aa:c1:ab:f1:a9:d5",
+        "peer": "a"
+      }
+    },
+    {
+      "a": {
+        "node": "leaf2",
+        "interface": "e1-10",
+        "mac": "aa:c1:ab:ef:c6:5f",
+        "peer": "z"
+      },
+      "z": {
+        "node": "client2",
+        "interface": "eth1",
+        "mac": "aa:c1:ab:29:c8:6a",
+        "peer": "a"
+      }
+    }
+  ]
+}
