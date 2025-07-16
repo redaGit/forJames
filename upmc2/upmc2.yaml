@@ -1,0 +1,14 @@
+name: topo2
+topology:
+  defaults:
+    kind: nokia_srlinux
+    image: ghcr.io/nokia/srlinux:25.3.1
+  nodes:
+    leaf1:
+    leaf2:
+    client1:
+    client2:
+  links:
+    - endpoints: ["leaf1:e1-1", "leaf2:e1-1"]
+    - endpoints: ["leaf1:e1-10", "client1:e1-10"]
+    - endpoints: ["leaf2:e1-10", "client2:e1-10"]
