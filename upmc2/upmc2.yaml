@@ -1,4 +1,4 @@
-name: topo2
+name: upmc2
 topology:
   defaults:
     kind: nokia_srlinux
